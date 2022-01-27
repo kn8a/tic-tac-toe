@@ -4,22 +4,53 @@ const Gameboard = (()=>{
     // same thing, just easier to type :D
     const board = new Array(9).fill('');
     let player = "x";
-    const xMark = '<svg height="66" width="66"><line x1="0" y1="0" x2="66" y2="66" style="stroke:#000; stroke-width:7" /><line x1="66" y1="0" x2="0" y2="66" style="stroke:#000; stroke-width:7" /></svg>';
-    const yMark = '<svg height="70" width="70"><circle cx="35" cy="35" r="30" stroke="red" stroke-width="10" fill="transparent"/></svg>'
-
+    
+    
+    
     const cells = document.querySelectorAll(".square");
     log(cells);
     cells.forEach((cell) => {
         cell.addEventListener('click', () => {
-            const choice = cell.getAttribute('data-cell');
+            let choice = cell.getAttribute('data-cell');
             log(choice);
-            if (board[choice] = "x" || board[choice] = "o") {return} //check if cell already marked
-            
+            if (board[choice] == "x" || board[choice] == "o") {return} //check if cell already marked
+            //continue here checking for who's turn and placing mark
+            if (player == 'x') {
+                const xMark = document.createElement('img');
+                xMark.src = './svg/x.svg';
+                document.getElementById(`s${choice}`).appendChild(xMark);
+                board[choice] = 'x';
+                player = 'o';
+            }
+            else {
+                const yMark = document.createElement('img');
+                yMark.src = './svg/o.svg';
+                document.getElementById(`s${choice}`).appendChild(yMark);
+                board[choice] = 'o';
+                player = 'x';
+            }
+            let winner = checkForWinner(board, player) //winner function call
+
+            log(board);
 
         })
     }) 
     
+
+
     //const checkCell = 
+    function checkForWinner(a, player) {
+        if (a[0] == a[1] && a[0] == a[2] ||
+            a[2] == a[3] && a[2] == a[4] ||
+            a[6] == a[7] && a[6] == a[8] ||
+            a[0] == a[3] && a[0] == a[6] ||
+            a[1] == a[4] && a[1] == a[7] ||
+            a[2] == a[5] && a[2] == a[8] ||
+            a[2] == a[4] && a[2] == a[6] ||
+            a[0] == a[4] && a[0] == a[8]) {
+                announceWinner(player);        
+        }
+    }
 
     //function checkCell(cell, array)
     
