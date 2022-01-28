@@ -2,7 +2,7 @@ body {
     display: flex;
     margin: 0;
     height: 100vh;
-    border: 1px red solid;
+    border: 0px red solid;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -54,9 +54,28 @@ h1 {
     font-weight: 100;
 }
 
+.reset {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    border: rgb(28, 3, 255) 1px solid;
+}
+
+.button {
+    height: 60px;
+    width: 60px;
+}
 
 .footer {
     display: flex;
     flex: 1;
     border: purple 1px solid;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.winner {
+    flex: 1;
+    display: flex;
+    border: rgb(0, 255, 64) 1px solid;
 }
