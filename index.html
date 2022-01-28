@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="game.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gameboard.css">
     <title>Tic Tac Toe</title>
 
 </head>
 <body>
-    <div class="main">
+    <div class="header">
+        <div class='spacer'></div>
+        <div class="title">
+            <h1>TIC</h1><img src="./svg/x.svg"><h1>TAC</h1><img src="./svg/o.svg"><h1>TOE</h1>
+        </div>
+        <div class='spacer'></div>
+    </div>
+    <div class="main">       
         <div class="gameBoard">
             <div class="row">
                 <div class="square" id="s0" data-cell=0></div>  
@@ -34,3 +42,4 @@
     <div class="footer"></div>
 </body>
 </html>
+

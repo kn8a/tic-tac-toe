@@ -5,51 +5,58 @@ body {
     border: 1px red solid;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    background-color: #F5DFBB;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
 
 .main {
-
+    flex: 1;
     display: flex;
     flex-direction: column;
     max-width: 800px;
-    height: 98vh;
     justify-content: center;
     justify-items: center;
+    user-select: none;
+    border: blue 0px solid;
 }
 
-.gameBoard {
+.header {
     display: flex;
-    justify-content: center;
-    justify-items: center;
-
+    flex: 1;
+    max-width: 800px;
+    border: green 0px solid;
     flex-direction: column;
+    
+
 }
 
-.row {
-    display: flex;
+.spacer {
+    flex: 1;
 }
 
-.square {
-    height: 100px;
-    width: 100px;
-    border: 1px darkgray solid;
+.title {
+    flex: 1;
     display: flex;
-    justify-content: center;
+    font-size: 28px;
+    gap: 10px;
     align-items: center;
+    color: gray;
+}
+
+.title img {
+    max-height: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 100;
 }
 
 
-
-#s0, #s1, #s2 {
-    border-top: 0;
-}
-#s0, #s3, #s6 {
-    border-left: 0;
-}
-#s6, #s7, #s8 {
-    border-bottom: 0;
-}
-#s2, #s5, #s8 {
-    border-right: 0;
+.footer {
+    display: flex;
+    flex: 1;
+    border: purple 1px solid;
 }
