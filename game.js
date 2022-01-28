@@ -36,20 +36,14 @@ const Gameboard = (()=>{
         })
     }) 
     
-
-
-    //const checkCell = 
     function checkForWinner(a, player) {
         let p = player;
         //0=1=2    2=3=4    6=7=8      0=3=6    1=4=7    2=5=8      2=4=6    0=4=8
-        if (a[0] == p && a[1] == p && a[2] == p||
-            a[3] == p && a[4] == p && a[5] == p||
-            a[6] == p && a[7] == p && a[8] == p||
-            a[0] == p && a[3] == p && a[6] == p||
-            a[1] == p && a[4] == p && a[7] == p||
-            a[2] == p && a[5] == p && a[8] == p||
-            a[0] == p && a[4] == p && a[8] == p||
-            a[2] == p && a[4] == p && a[6] == p) {
+        if (a[0] == p && a[1] == p && a[2] == p|| a[3] == p && a[4] == p && a[5] == p||
+            a[6] == p && a[7] == p && a[8] == p|| a[0] == p && a[3] == p && a[6] == p||
+            a[1] == p && a[4] == p && a[7] == p|| a[2] == p && a[5] == p && a[8] == p||
+            a[0] == p && a[4] == p && a[8] == p|| a[2] == p && a[4] == p && a[6] == p) 
+            {
             window.alert(player + " is the winner");        
         }
         else if (board.find(empty => empty =='') == undefined) {
