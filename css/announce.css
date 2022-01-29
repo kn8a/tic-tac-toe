@@ -16,8 +16,7 @@
     gap: 20px;
     color: #127475;
     display: none;
-    border: #0E9594 1px solid;
-    
+    border: #0E9594 1px solid;  
 }
 
 .oWon {
@@ -32,9 +31,7 @@
     display: none;
     gap: 20px;
     color:gray;
-    align-items: center;
-    text-align: center;
-    align-content: center;
+
     border: gray 1px solid;
 }
 
@@ -54,5 +51,11 @@
     position:fixed;
     left: 50%;
     top: 45%;
-    transform: translate(-50%, 0%);    
+    transform: translate(-50%, 0%);  
+    width: 210px;  
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
 }

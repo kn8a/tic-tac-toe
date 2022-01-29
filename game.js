@@ -1,7 +1,4 @@
-const log = console.log;
-
 const Gameboard = (()=>{
-    
     const board = new Array(9).fill('');
     let player = "x";    
     const cells = document.querySelectorAll(".square");
