@@ -2,7 +2,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    font-size: 32px;
+    font-size: 42px;
 }
 
 .winner img {
@@ -16,6 +16,7 @@
     gap: 20px;
     color: #127475;
     display: none;
+    border: #0E9594 1px solid;
     
 }
 
@@ -24,6 +25,7 @@
     gap: 20px;
     color: #772b21;
     display: none;
+    border: #F2542D 1px solid;
 }
 
 .tie {
@@ -33,6 +35,7 @@
     align-items: center;
     text-align: center;
     align-content: center;
+    border: gray 1px solid;
 }
 
 .footer {
@@ -41,10 +44,15 @@
 }
 
 .xWon, .oWon, .tie {
+
     padding: 40px;
     border-radius: 24px;
     background-color: #f5e6ce;
-    box-shadow: 0px 0px 32px 6px rgba(255,255,255,1);
-    -webkit-box-shadow: 0px 0px 32px 6px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 32px 6px rgba(255,255,255,1);
+    box-shadow: 0px 0px 32px 6px rgba(255,250,239,1);
+    -webkit-box-shadow: 0px 0px 32px 6px rgba(255,250,239,1);
+    -moz-box-shadow: 0px 0px 32px 6px rgba(255,250,239,1);
+    position:fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, 0%);    
 }
