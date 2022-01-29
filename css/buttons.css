@@ -2,7 +2,6 @@
     display: flex;
     gap: 24px;
     flex: 1;
-    border: rgb(28, 3, 255) 0px solid;
     justify-content: center;
 }
 

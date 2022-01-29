@@ -1,9 +1,7 @@
-.gameBoard {
-    
+.gameBoard {    
     display: flex;
     justify-content: center;
     justify-items: center;
-
     flex-direction: column;
 }
 
@@ -20,8 +18,6 @@
     align-items: center;
     cursor: pointer;
 }
-
-
 
 #s0, #s1, #s2 {
     border-top: 0;

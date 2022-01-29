@@ -2,7 +2,6 @@ body {
     display: flex;
     margin: 0;
     height: 100vh;
-    border: 0px red solid;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -19,14 +18,12 @@ body {
     justify-content: center;
     justify-items: center;
     user-select: none;
-    border: blue 0px solid;
 }
 
 .header {
     display: flex;
     flex: 1;
     max-width: 800px;
-    border: green 0px solid;
     flex-direction: column;
 }
 
@@ -51,8 +48,6 @@ h1 {
 .bottom {
     display: flex;
     flex: 1;
-    border: purple 0px solid;
     justify-content: space-between;
     flex-direction: column;
 }
-
