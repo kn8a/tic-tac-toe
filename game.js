@@ -6,8 +6,8 @@ const Gameboard = (()=>{
     let player = "x";    
     const cells = document.querySelectorAll(".square");
     let gameOver = false;
+    //displayTurn(player); // <--write function for this ***TODO***
     cells.forEach((cell) => {
-        //displayTurn(player); // <--write function for this ****TODO****
         cell.addEventListener('click', () => {
             let choice = cell.getAttribute('data-cell');
             if (board[choice] == "x" || board[choice] == "o" || gameOver == true) {return} //check if cell already marked
@@ -17,7 +17,7 @@ const Gameboard = (()=>{
                 document.getElementById(`s${choice}`).appendChild(xMark);
                 cell.classList.add('marked');
                 board[choice] = 'x';
-                winner = checkForWinner(board, player);
+                checkForWinner(board, player);
                 player = 'o';
             }
             else if (player == 'o') {
@@ -26,7 +26,7 @@ const Gameboard = (()=>{
                 document.getElementById(`s${choice}`).appendChild(yMark);
                 cell.classList.add('marked');
                 board[choice] = 'o';
-                winner = checkForWinner(board, player);
+                checkForWinner(board, player);
                 player = 'x';
             }
         })

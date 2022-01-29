@@ -15,7 +15,6 @@
 
 .title img {
     max-height: 20px;
-    cursor: pointer;
 }
 #reset {
     transition: transform 100ms ease-in;
