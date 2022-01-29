@@ -7,6 +7,7 @@
     <script src="game.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gameboard.css">
+    <link rel="stylesheet" href="css/buttons.css">
     <title>Tic Tac Toe</title>
 
 </head>
@@ -19,7 +20,7 @@
         <div class='spacer'></div>
     </div>
     <div class="main">       
-        <div class="gameBoard">
+        <div class="gameBoard" id="gameBoard">
             <div class="row">
                 <div class="square" id="s0" data-cell=0></div>  
                 <div class="square" id="s1" data-cell=1></div>
@@ -40,13 +41,17 @@
 
     </div>
 
-    <div class="footer">
-        <div class="winner"></div>
+    <div class="bottom">
+        <div class="winner">
+            <div class="xWon" id="xWon"><img src="./svg/x.svg"><div>Won!</div></div>
+            <div class="oWon" id="oWon"><img src="./svg/o.svg"><div>Won!</div></div>
+            <div class="tie" id="tie"><div>Tie</div></div>
+        </div>
         <div class="reset">
-            <div class='button'><img src="./svg/refresh.svg"></div>
-            <div class='button'><img src="./svg/settings.svg"></div>
+            <div class='button'><img id="reset" src="./svg/refresh.svg" onClick="window.location.reload(false)"></div>
         </div>
     </div>
+    
 </body>
 </html>
 

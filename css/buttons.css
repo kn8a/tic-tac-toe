@@ -1,0 +1,31 @@
+.reset {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    border: rgb(28, 3, 255) 0px solid;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.title img {
+    max-height: 20px;
+    cursor: pointer;
+}
+#reset {
+    transition: transform 100ms ease-in;
+}
+
+#reset:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
+#reset:active {
+    transform: scale(0.9) rotate(360deg);
+}

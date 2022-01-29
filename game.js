@@ -5,19 +5,19 @@ const Gameboard = (()=>{
     const board = new Array(9).fill('');
     let player = "x";    
     const cells = document.querySelectorAll(".square");
-    
+    let gameOver = false;
     cells.forEach((cell) => {
+        //displayTurn(player); // <--write function for this ****TODO****
         cell.addEventListener('click', () => {
             let choice = cell.getAttribute('data-cell');
-            if (board[choice] == "x" || board[choice] == "o") {return} //check if cell already marked
-            //continue here checking for who's turn and placing mark
+            if (board[choice] == "x" || board[choice] == "o" || gameOver == true) {return} //check if cell already marked
             if (player == 'x') {
                 const xMark = document.createElement('img');
                 xMark.src = './svg/x.svg';
                 document.getElementById(`s${choice}`).appendChild(xMark);
                 cell.classList.add('marked');
                 board[choice] = 'x';
-                checkForWinner(board, player);
+                winner = checkForWinner(board, player);
                 player = 'o';
             }
             else if (player == 'o') {
@@ -26,58 +26,39 @@ const Gameboard = (()=>{
                 document.getElementById(`s${choice}`).appendChild(yMark);
                 cell.classList.add('marked');
                 board[choice] = 'o';
-                checkForWinner(board, player);
+                winner = checkForWinner(board, player);
                 player = 'x';
             }
-            //let winner = checkForWinner(board, player) //winner function call
-
-            log(board.find(empty => empty ==''));
-
         })
     }) 
     
     function checkForWinner(a, player) {
         let p = player;
-        //0=1=2    2=3=4    6=7=8      0=3=6    1=4=7    2=5=8      2=4=6    0=4=8
         if (a[0] == p && a[1] == p && a[2] == p|| a[3] == p && a[4] == p && a[5] == p||
             a[6] == p && a[7] == p && a[8] == p|| a[0] == p && a[3] == p && a[6] == p||
             a[1] == p && a[4] == p && a[7] == p|| a[2] == p && a[5] == p && a[8] == p||
             a[0] == p && a[4] == p && a[8] == p|| a[2] == p && a[4] == p && a[6] == p) 
             {
-            window.alert(player + " is the winner");        
+            announceWinner(player);
         }
-        else if (board.find(empty => empty =='') == undefined) {
-            window.alert("its a tie");
+        else if (board.find(empty => empty =='') == undefined) { //when array filled with values
+            announceWinner("tie");
         }
     }
 
-
-    //function checkCell(cell, array)
-    
-    const setCell = (index, value) => {
-      // a function that updates the contents of a given array index
-    }
-    const resetBoard = () => {
-      // a function that resets the board to empty
-    }
-    const getBoard = () => {
-      // a function that returns **a copy** of the board.
-    }
-    return {
-      setCell,
-      getBoard,
-      resetBoard
+    function announceWinner (player) {
+        gameOver = true;
+        document.getElementById('gameBoard').style.filter = "blur(6px)";
+        switch (player) {
+          case "x":
+            document.getElementById('xWon').style.display = "flex";
+            break;
+          case "o":
+            document.getElementById('oWon').style.display = "flex"
+            break;
+          case "tie":
+            document.getElementById('tie').style.display = "inline"
+            break;
+        }
     }
   })();
-
-  //on click check whos turn it is, 
-  
-  //check if mark already exists in cell (X or O). 
-
-  //place mark, update array
-
-  //check if (1=2=3 or 3=4=5 or 7=8=9) or (1=4=7 or 2=5=8 or 3=6=9) or (3=5=7 or 1=5=9)
-            //0=1=2    2=3=4    6=7=8      0=3=6    1=4=7    2=5=8      2=4=6    0=4=8
-  
-  //if above yes, winner is current player
-  //if above no, change player
