@@ -7,31 +7,23 @@
 
 .winner img {
     height: 40px;
-    width: 40px;
-    
+    width: 40px;   
 }
 
 .xWon {
     display: flex;
-    gap: 20px;
     color: #127475;
-    display: none;
     border: #0E9594 1px solid;  
 }
 
 .oWon {
     display: flex;
-    gap: 20px;
     color: #772b21;
-    display: none;
     border: #F2542D 1px solid;
 }
 
 .tie {
-    display: none;
-    gap: 20px;
     color:gray;
-
     border: gray 1px solid;
 }
 
@@ -41,7 +33,6 @@
 }
 
 .xWon, .oWon, .tie {
-
     padding: 40px;
     border-radius: 24px;
     background-color: #f5e6ce;
@@ -58,4 +49,6 @@
     align-content: center;
     justify-content: center;
     justify-items: center;
+    gap: 20px;
+    display: none;
 }
