@@ -9,21 +9,11 @@ const Gameboard = (()=>{
             let choice = cell.getAttribute('data-cell');
             if (board[choice] == "x" || board[choice] == "o" || gameOver == true) {return} //check if cell already marked
             if (player == 'x') {
-                const xMark = document.createElement('img');
-                xMark.src = './svg/x.svg';
-                document.getElementById(`s${choice}`).appendChild(xMark);
-                cell.classList.add('marked');
-                board[choice] = 'x';
-                checkForWinner(board, player);
+                placeMarker(cell, player, choice)
                 player = 'o';
             }
             else if (player == 'o') {
-                const yMark = document.createElement('img');
-                yMark.src = './svg/o.svg';
-                document.getElementById(`s${choice}`).appendChild(yMark);
-                cell.classList.add('marked');
-                board[choice] = 'o';
-                checkForWinner(board, player);
+                placeMarker(cell, player, choice)
                 player = 'x';
             }
         })
@@ -41,6 +31,15 @@ const Gameboard = (()=>{
         else if (board.find(empty => empty =='') == undefined) { //when array filled with values
             announceWinner("tie");
         }
+    }
+
+    function placeMarker(cell,player, choice) {
+        const marker = document.createElement('img');
+        marker.src = `./svg/${player}.svg`;
+        document.getElementById(`s${choice}`).appendChild(marker);
+        cell.classList.add('marked');
+        board[choice] = player;
+        checkForWinner(board, player);
     }
 
     function announceWinner (player) {
