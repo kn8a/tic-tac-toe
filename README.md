@@ -26,6 +26,6 @@ Live demo: [https://kn8a.github.io/tic-tac-toe/](https://kn8a.github.io/tic-tac-
 
 ### What I Learned
 
- - Utilizing an object and more funtions to better style the code.
+ - Utilizing an object and more funtions to optimize the code.
  - How to work with SVGs.
  - How to better manipulate DOM elements.
