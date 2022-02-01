@@ -1,9 +1,9 @@
 # Tic-Tac-Toe
-## Minimalistic PvP game with clean UI
+** Minimalistic PvP game with clean UI **
 <img src=https://user-images.githubusercontent.com/88045655/151916402-6e25509a-0690-406b-86f0-1bf958537304.JPG alt="Tic-tac-toe game" width="200">
 
 ### Background
-This project is written in HTML, CSS, JS to answer the [Ti-tac-toe problem](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe) in [The Odin Project](https://www.theodinproject.com/).
+This project is written in HTML, CSS, JS to answer the [Tic-tac-toe problem](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/tic-tac-toe) in [The Odin Project](https://www.theodinproject.com/).
 My goal was to make a simple and minimalistic game with a clean UI where players can play right away without any prompts.
 This is a simple PvP implementation, with AI option to be added in the future.
 
